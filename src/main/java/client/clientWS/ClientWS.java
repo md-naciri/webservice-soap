@@ -1,7 +1,8 @@
-import proxy.BanqueService;
-import proxy.BanqueWS;
-import proxy.Compte;
+package client.clientWS;
 
+import client.proxy.BanqueService;
+import client.proxy.BanqueWS;
+import client.proxy.Compte;
 import java.util.List;
 
 public class ClientWS {

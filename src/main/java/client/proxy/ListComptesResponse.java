@@ -1,5 +1,5 @@
 
-package proxy;
+package client.proxy;
 
 import java.util.ArrayList;
 import java.util.List;

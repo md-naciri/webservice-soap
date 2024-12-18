@@ -1,5 +1,5 @@
 
-package proxy;
+package client.proxy;
 
 import java.util.List;
 import jakarta.jws.WebMethod;
@@ -27,21 +27,6 @@ public interface BanqueService {
 
     /**
      * 
-     * @param montant
-     * @return
-     *     returns double
-     */
-    @WebMethod(operationName = "Convert")
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "Convert", targetNamespace = "http://ws/", className = "proxy.Convert")
-    @ResponseWrapper(localName = "ConvertResponse", targetNamespace = "http://ws/", className = "proxy.ConvertResponse")
-    @Action(input = "http://ws/BanqueService/ConvertRequest", output = "http://ws/BanqueService/ConvertResponse")
-    public double convert(
-        @WebParam(name = "montant", targetNamespace = "")
-        double montant);
-
-    /**
-     * 
      * @param code
      * @return
      *     returns proxy.Compte
@@ -66,5 +51,20 @@ public interface BanqueService {
     @ResponseWrapper(localName = "listComptesResponse", targetNamespace = "http://ws/", className = "proxy.ListComptesResponse")
     @Action(input = "http://ws/BanqueService/listComptesRequest", output = "http://ws/BanqueService/listComptesResponse")
     public List<Compte> listComptes();
+
+    /**
+     * 
+     * @param montant
+     * @return
+     *     returns double
+     */
+    @WebMethod(operationName = "Convert")
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "Convert", targetNamespace = "http://ws/", className = "proxy.Convert")
+    @ResponseWrapper(localName = "ConvertResponse", targetNamespace = "http://ws/", className = "proxy.ConvertResponse")
+    @Action(input = "http://ws/BanqueService/ConvertRequest", output = "http://ws/BanqueService/ConvertResponse")
+    public double convert(
+        @WebParam(name = "montant", targetNamespace = "")
+        double montant);
 
 }

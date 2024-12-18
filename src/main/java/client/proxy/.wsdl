@@ -4,12 +4,6 @@
 <xsd:import namespace="http://ws/" schemaLocation="http://localhost:9191/?xsd=1"/>
 </xsd:schema>
 </types>
-<message name="Convert">
-<part name="parameters" element="tns:Convert"/>
-</message>
-<message name="ConvertResponse">
-<part name="parameters" element="tns:ConvertResponse"/>
-</message>
 <message name="getCompte">
 <part name="parameters" element="tns:getCompte"/>
 </message>
@@ -22,11 +16,13 @@
 <message name="listComptesResponse">
 <part name="parameters" element="tns:listComptesResponse"/>
 </message>
+<message name="Convert">
+<part name="parameters" element="tns:Convert"/>
+</message>
+<message name="ConvertResponse">
+<part name="parameters" element="tns:ConvertResponse"/>
+</message>
 <portType name="BanqueService">
-<operation name="Convert">
-<input wsam:Action="http://ws/BanqueService/ConvertRequest" message="tns:Convert"/>
-<output wsam:Action="http://ws/BanqueService/ConvertResponse" message="tns:ConvertResponse"/>
-</operation>
 <operation name="getCompte">
 <input wsam:Action="http://ws/BanqueService/getCompteRequest" message="tns:getCompte"/>
 <output wsam:Action="http://ws/BanqueService/getCompteResponse" message="tns:getCompteResponse"/>
@@ -35,18 +31,13 @@
 <input wsam:Action="http://ws/BanqueService/listComptesRequest" message="tns:listComptes"/>
 <output wsam:Action="http://ws/BanqueService/listComptesResponse" message="tns:listComptesResponse"/>
 </operation>
+<operation name="Convert">
+<input wsam:Action="http://ws/BanqueService/ConvertRequest" message="tns:Convert"/>
+<output wsam:Action="http://ws/BanqueService/ConvertResponse" message="tns:ConvertResponse"/>
+</operation>
 </portType>
 <binding name="BanqueServicePortBinding" type="tns:BanqueService">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
-<operation name="Convert">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
 <operation name="getCompte">
 <soap:operation soapAction=""/>
 <input>
@@ -57,6 +48,15 @@
 </output>
 </operation>
 <operation name="listComptes">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="Convert">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
