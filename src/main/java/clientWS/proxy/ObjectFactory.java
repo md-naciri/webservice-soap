@@ -1,5 +1,5 @@
 
-package client.proxy;
+package clientWS.proxy;
 
 import javax.xml.namespace.QName;
 import jakarta.xml.bind.JAXBElement;
@@ -10,7 +10,7 @@ import jakarta.xml.bind.annotation.XmlRegistry;
 /**
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
- * generated in the proxy package. 
+ * generated in the clientWS.proxy package. 
  * <p>An ObjectFactory allows you to programmatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
@@ -33,7 +33,7 @@ public class ObjectFactory {
     private static final QName _ListComptesResponse_QNAME = new QName("http://ws/", "listComptesResponse");
 
     /**
-     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: proxy
+     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: clientWS.proxy
      * 
      */
     public ObjectFactory() {

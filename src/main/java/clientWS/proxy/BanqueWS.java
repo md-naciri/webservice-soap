@@ -1,5 +1,5 @@
 
-package client.proxy;
+package clientWS.proxy;
 
 import java.net.MalformedURLException;
 import java.net.URL;

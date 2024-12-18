@@ -1,5 +1,5 @@
 
-package client.proxy;
+package clientWS.proxy;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;

@@ -1,2 +1,2 @@
 @jakarta.xml.bind.annotation.XmlSchema(namespace = "http://ws/")
-package client.proxy;
+package clientWS.proxy;
